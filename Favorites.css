@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 20px;
+}
+
+h2 {
+  margin-bottom: 5px;
+}
+
+.gallery-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  width: 22%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.quote {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.art-img {
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+.heart1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+}
+
+.heart1 img.tosmall {
+  width: 25px;
+  height: 25px;
+  transition: all 0.3s ease;
+}
+
+/* Heart states */
+.heart1 img[data-liked="true"] {
+  filter: invert(21%) sepia(85%) saturate(7483%) hue-rotate(358deg) brightness(91%) contrast(120%);
+}
+
+.heart1 img[data-liked="false"] {
+  filter: grayscale(100%);
+}
+
+.heart1[data-liked="true"] {
+  background-color: rgba(255,0,0,0.1);
+  border-color: red;
+}
+
+/* Comment section styling */
+.comments-section {
+  margin-top: 10px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.comments-list {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+}
+
+.comments-list li {
+  background: #fff;
+  border: solid 0.5px;
+  margin: 3px 0;
+  padding: 2px;
+  border-radius: 3px;
+  align-items: left;
+}
+
+.comment-input {
+  width: 80%;
+  padding: 5px;
+  margin: 5px auto;
+  display: block;
+}
+
+button {
+  padding: 5px 15px;
+  cursor: pointer;
+  background-color: #ff4081; /* pink button */
+  border: none;
+  color: white;
+  border-radius: 3px;
+  margin-top: 5px;
+}

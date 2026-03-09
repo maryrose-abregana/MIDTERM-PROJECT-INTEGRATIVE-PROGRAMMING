@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="Favorites.css" rel="stylesheet">
+  <title>Practice #2: Abstract Art Gallery</title>
+</head>
+<body>
+  <div class="gallery-row">
+    <!-- Artwork 1 -->
+    <div class="gallery-item">
+      <p class="quote">"Don't just use technology - create it." <br> "Dream in code. Build in reality."</p>
+      <div class="image-container">
+        <img src="Images/longerWord.jpg" alt="Longer Word Artwork" class="art-img">
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="Images/heart.png" class="tosmall">
+        </div>
+      </div>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
+
+    <!-- Artwork 2 -->
+    <div class="gallery-item">
+      <p class="quote">"Know your birthstone & its significance."</p>
+      <div class="image-container">
+        <img src="Images/birthstone.jpg" alt="Birthstone Artwork" class="art-img">
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="Images/heart.png" class="tosmall">
+        </div>
+      </div>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
+
+    <!-- Artwork 3 -->
+    <div class="gallery-item">
+      <p class="quote">"Convert ideas into solutions."</p>
+      <div class="image-container">
+        <img src="Images/tempConverter.png" alt="Temperature Converter Artwork" class="art-img">
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="Images/heart.png" class="tosmall">
+        </div>
+      </div>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
+
+    <!-- Artwork 4 -->
+    <div class="gallery-item">
+      <p class="quote">"Math is the language of logic."</p>
+      <div class="image-container">
+        <img src="Images/operators.jpg" alt="Operators Artwork" class="art-img">
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="Images/heart.png" class="tosmall">
+        </div>
+      </div>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleLike(element) {
+      let heartImg = element.querySelector("img");
+
+      if (heartImg.dataset.liked === "true") {
+        heartImg.style.filter = "grayscale(100%)";
+        heartImg.dataset.liked = "false";
+      } else {
+        heartImg.style.filter = "invert(21%) sepia(85%) saturate(7483%) hue-rotate(358deg) brightness(91%) contrast(120%)"; //Turn red
+        heartImg.dataset.liked = "true";
+      }
+    }
+
+    function addComment(button) {
+      let commentInput = button.previousElementSibling;
+      let commentText = commentInput.value.trim();
+      if (commentText !== "") {
+        let commentList = button.parentElement.querySelector(".comments-list");
+        let newComment = document.createElement("li");
+        newComment.textContent = commentText;
+        commentList.appendChild(newComment);
+        commentInput.value = "";
+      }
+    }
+
+    function openPage(url){
+      window.open(url, '_blank');
+      self.close();
+    }
+  </script>
+</body>
+</html>
