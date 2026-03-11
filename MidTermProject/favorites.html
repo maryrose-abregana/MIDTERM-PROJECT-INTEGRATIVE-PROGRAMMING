@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Favorites.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div id = "artwork-1" class="artwork">
+            <p class="quote">"Don't just use techonology - create it." <br> "Dream in code. Build in reality."</p>
+            <div class="heart1" onclick="toggleLike(this)"><img src="Images/heart.png" class="tosmall"></div>
+        </div>
+        <div class="comments-section">
+            <p>Comment Section</p>
+            <ul class="comments-list"></ul>
+            <input type="text" class="comment-input" placeholder="Add a comment...">
+            <button onclick="addComment(this)">Post</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleLike(element) {
+            let heartImg = element.querySelector("img");
+
+            if (heartImg.dataset.liked === "true") {
+                heartImg.style.filter = "grayscale(100%)";
+                heartImg.dataset.liked = "false";
+            } else {
+                heartImg.style.filter = "invert(21%) sepia(85%) saturate(7483%) hue-rotate(358deg) brightness(91%) contrast(120%)"; //Turn red
+                heartImg.dataset.liked = "true";
+            }
+         }
+        function addComment(button) {
+            let commentInput = button.previousElementSibling;
+            let commentText = commentInput.value.trim();
+            if (commentText !== "") {
+                let commentList = button.parentElement.querySelector(".comments-list");
+                let newComment = document.createElement("li");
+                newComment.textContent = commentText;
+                commentList.appendChild(newComment);
+                commentInput.value = "";
+            }
+        }
+
+// open new tab then close previous tab
+        function openPage(url){
+            window.open(url, '_blank');
+            self.close();
+        }
+    </script>
+
+</body>
+</html>
