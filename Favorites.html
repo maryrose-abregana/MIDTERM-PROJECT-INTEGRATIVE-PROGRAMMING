@@ -1,111 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="Favorites.css" rel="stylesheet">
-  <title>Practice #2: Abstract Art Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Favorites.css">
+    <title>Favorites</title>
 </head>
 <body>
-  <div class="gallery-row">
-    <!-- Artwork 1 -->
-    <div class="gallery-item">
-      <p class="quote">"Don't just use technology - create it." <br> "Dream in code. Build in reality."</p>
-      <div class="image-container">
-        <img src="Images/longerWord.jpg" alt="Longer Word Artwork" class="art-img">
-        <div class="heart1" onclick="toggleLike(this)">
-          <img src="Images/heart.png" class="tosmall">
+
+<div class="container">
+
+    <!-- CARD 1 -->
+    <div class="card">
+        <div id="artwork-1" class="artwork">
+            <img src="Images/image1.jpg" class="art-img">
+            <p class="quote">"Don't just use technology - create it." <br> "Dream in code. Build in reality."</p>
         </div>
-      </div>
-      <div class="comments-section">
-        <p>Comment Section</p>
-        <ul class="comments-list"></ul>
-        <input type="text" class="comment-input" placeholder="Add a comment...">
-        <button onclick="addComment(this)">Post</button>
-      </div>
+        <div class="comments-section">
+            <p>Comment Section</p>
+            <ul class="comments-list"></ul>
+            <div class="comment-input-row">
+                <div class="heart1" onclick="toggleLike(this)">
+                    <img src="Images/heart.png" class="tosmall">
+                </div>
+                <input type="text" class="comment-input" placeholder="Write a comment...">
+                <button onclick="addComment(this)">Post</button>
+            </div>
+        </div>
     </div>
 
-    <!-- Artwork 2 -->
-    <div class="gallery-item">
-      <p class="quote">"Know your birthstone & its significance."</p>
-      <div class="image-container">
-        <img src="Images/birthstone.jpg" alt="Birthstone Artwork" class="art-img">
-        <div class="heart1" onclick="toggleLike(this)">
-          <img src="Images/heart.png" class="tosmall">
+    <!-- CARD 2 -->
+    <div class="card">
+        <div class="artwork">
+            <img src="Images/image2.jpg" class="art-img">
+            <p class="quote">"Connected minds, shaping a digital world."</p>
         </div>
-      </div>
-      <div class="comments-section">
-        <p>Comment Section</p>
-        <ul class="comments-list"></ul>
-        <input type="text" class="comment-input" placeholder="Add a comment...">
-        <button onclick="addComment(this)">Post</button>
-      </div>
+        <div class="comments-section">
+            <p>Comment Section</p>
+            <ul class="comments-list"></ul>
+            <div class="comment-input-row">
+                <div class="heart1" onclick="toggleLike(this)">
+                    <img src="Images/heart.png" class="tosmall">
+                </div>
+                <input type="text" class="comment-input" placeholder="Write a comment...">
+                <button onclick="addComment(this)">Post</button>
+            </div>
+        </div>
     </div>
 
-    <!-- Artwork 3 -->
-    <div class="gallery-item">
-      <p class="quote">"Convert ideas into solutions."</p>
-      <div class="image-container">
-        <img src="Images/tempConverter.png" alt="Temperature Converter Artwork" class="art-img">
-        <div class="heart1" onclick="toggleLike(this)">
-          <img src="Images/heart.png" class="tosmall">
+    <!-- CARD 3 -->
+    <div class="card">
+        <div class="artwork">
+            <img src="Images/image3.jpg" class="art-img">
+            <p class="quote">"Where human wisdom meets machine intelligence."</p>
         </div>
-      </div>
-      <div class="comments-section">
-        <p>Comment Section</p>
-        <ul class="comments-list"></ul>
-        <input type="text" class="comment-input" placeholder="Add a comment...">
-        <button onclick="addComment(this)">Post</button>
-      </div>
+        <div class="comments-section">
+            <p>Comment Section</p>
+            <ul class="comments-list"></ul>
+            <div class="comment-input-row">
+                <div class="heart1" onclick="toggleLike(this)">
+                    <img src="Images/heart.png" class="tosmall">
+                </div>
+                <input type="text" class="comment-input" placeholder="Write a comment...">
+                <button onclick="addComment(this)">Post</button>
+            </div>
+        </div>
     </div>
 
-    <!-- Artwork 4 -->
-    <div class="gallery-item">
-      <p class="quote">"Math is the language of logic."</p>
-      <div class="image-container">
-        <img src="Images/operators.jpg" alt="Operators Artwork" class="art-img">
-        <div class="heart1" onclick="toggleLike(this)">
-          <img src="Images/heart.png" class="tosmall">
+    <!-- CARD 4 -->
+    <div class="card">
+        <div class="artwork">
+            <img src="Images/image4.jpg" class="art-img">
+            <p class="quote">"Programming is the language of the future."</p>
         </div>
-      </div>
-      <div class="comments-section">
-        <p>Comment Section</p>
-        <ul class="comments-list"></ul>
-        <input type="text" class="comment-input" placeholder="Add a comment...">
-        <button onclick="addComment(this)">Post</button>
-      </div>
+        <div class="comments-section">
+            <p>Comment Section</p>
+            <ul class="comments-list"></ul>
+            <div class="comment-input-row">
+                <div class="heart1" onclick="toggleLike(this)">
+                    <img src="Images/heart.png" class="tosmall">
+                </div>
+                <input type="text" class="comment-input" placeholder="Write a comment...">
+                <button onclick="addComment(this)">Post</button>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <script>
-    function toggleLike(element) {
-      let heartImg = element.querySelector("img");
+    <!-- CARD 5 -->
+    <div class="card">
+        <div class="artwork">
+            <img src="Images/image5.jpg" class="art-img">
+            <p class="quote">"Build systems. Solve problems."</p>
+        </div>
+        <div class="comments-section">
+            <p>Comment Section</p>
+            <ul class="comments-list"></ul>
+            <div class="comment-input-row">
+                <div class="heart1" onclick="toggleLike(this)">
+                    <img src="Images/heart.png" class="tosmall">
+                </div>
+                <input type="text" class="comment-input" placeholder="Write a comment...">
+                <button onclick="addComment(this)">Post</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-      if (heartImg.dataset.liked === "true") {
-        heartImg.style.filter = "grayscale(100%)";
-        heartImg.dataset.liked = "false";
-      } else {
-        heartImg.style.filter = "invert(21%) sepia(85%) saturate(7483%) hue-rotate(358deg) brightness(91%) contrast(120%)"; //Turn red
-        heartImg.dataset.liked = "true";
-      }
-    }
+<script>
+        function toggleLike(element) {
+            let heartImg = element.querySelector("img");
 
-    function addComment(button) {
-      let commentInput = button.previousElementSibling;
-      let commentText = commentInput.value.trim();
-      if (commentText !== "") {
-        let commentList = button.parentElement.querySelector(".comments-list");
-        let newComment = document.createElement("li");
-        newComment.textContent = commentText;
-        commentList.appendChild(newComment);
-        commentInput.value = "";
-      }
-    }
+            if (heartImg.dataset.liked === "true") {
+                heartImg.style.filter = "grayscale(100%)";
+                heartImg.dataset.liked = "false";
+            } else {
+                heartImg.style.filter = "invert(21%) sepia(85%) saturate(7483%) hue-rotate(358deg) brightness(91%) contrast(120%)";
+                heartImg.dataset.liked = "true";
+            }
+         }
 
-    function openPage(url){
-      window.open(url, '_blank');
-      self.close();
-    }
-  </script>
+        function addComment(button) {
+
+            let commentInput = button.previousElementSibling;
+            let commentText = commentInput.value.trim();
+
+            if (commentText !== "") {
+
+                let card = button.closest(".comments-section");
+                let commentList = card.querySelector(".comments-list");
+
+                let newComment = document.createElement("li");
+                newComment.textContent = commentText;
+
+                commentList.appendChild(newComment);
+
+                commentInput.value = "";
+            }
+        }
+        
+        function openPage(url){
+            window.open(url, '_blank');
+            self.close();
+        }
+</script>
+
 </body>
 </html>
