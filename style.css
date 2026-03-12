@@ -582,6 +582,7 @@ footer a:hover {
   color: var(--black);
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(30, 55, 101, 0.3);
+  cursor: pointer;
 }
 
 /* RESPONSIVE — PORTFOLIO */
