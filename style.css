@@ -45,12 +45,12 @@ h1, h2, h3 {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .logo-img {
-  width: 45px;
-  height: 45px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
   border-radius: 50%; 
 }
@@ -149,6 +149,15 @@ h1, h2, h3 {
 
 .highlight {
   color: var(--pastel-blue);
+}
+
+.team-names {
+  font-size: 0.78em;
+  color: var(--pastel-blue);
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  opacity: 0.85;
+  white-space: nowrap;
 }
 
 .tagline {

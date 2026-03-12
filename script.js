@@ -138,8 +138,13 @@ function computeAcceleration(){
     let finalVelocity = parseFloat(prompt("Enter final velocity(m/s): "));
     let changeInTime = parseFloat(prompt("Enter change in time(seconds): "));
 
-    let acceleration = (finalVelocity - initialVelocity) /changeInTime;
-    alert("Acceleration: " + acceleration);
+    if (isNaN(initialVelocity) && isNaN(finalVelocity) && isNaN(changeInTime)){
+        alert("Invalid input. Please enter numeric values.");
+    }
+    else {
+        let acceleration = (finalVelocity - initialVelocity) /changeInTime;
+        alert("Acceleration: " + acceleration);
+    }
 }
 
 // FUNCTIONALITY FOR FAVORITES.HTML
