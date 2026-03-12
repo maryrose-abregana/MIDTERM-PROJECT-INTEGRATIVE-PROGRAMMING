@@ -351,6 +351,16 @@ h1, h2, h3 {
   margin-bottom: 15px;
 }
 
+.member-bio {
+  font-size: 0.82em;
+  color: #5a6a80;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-style: italic;
+  text-align: center;
+  padding: 0 10px;
+}
+
 .card-footer {
   margin-top: 15px;
 }
