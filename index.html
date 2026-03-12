@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DaMary's Team</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- NAVBAR -->
   <header>
     <nav class="navbar">
       <div class="logo">DaMary's</div>
@@ -14,41 +17,97 @@
         <li><a href="#" class="active">Home</a></li>
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">Favorites</a></li>
-        <li><a href="#">Contacts</a></li>
+        <li><a href="#">Close</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- HERO SECTION -->
   <section class="hero">
-    <h1>Meet Our <span class="highlight">Team</span></h1>
-    <p>Swipe right to explore our profiles.</p>
-  </section>
 
-  <section class="profiles">
-    <div class="profile-container">
-      <div class="profile-card">
-        <img src="images/rose.jpg" alt="Member 1">
-        <h2>Mary Rose Abregana</h2>
-        <p>Web Developer | Designer</p>
-        <button class="btn">Get in Touch →</button>
+    <div class="hero-content">
+
+      <div class="hero-left">
+        <span class="pre-title">— PC223 · Integrative Programming</span>
+        <h1>Hi, we're <span class="highlight">DaMary's</span></h1>
+        <p>
+          From PC223 classmates to a creative team,
+          we blend design thinking with technical skill
+          to bring ideas to life, one project at a time.
+        </p>
+        <p class="tagline">"Three minds. One vision."</p>
+        <button class="about-btn"
+          onclick="document.querySelector('.profiles').scrollIntoView({behavior:'smooth'})">
+          About Us →
+        </button>
       </div>
 
-      <div class="profile-card">
-        <img src="images/member2.jpg" alt="Member 2">
-        <h2>Mary Grace Sombilon</h2>
-        <p>Backend Engineer | Innovator</p>
-        <button class="btn">Get in Touch →</button>
+      <div class="hero-right">
+        <img src="images/rose1.png" alt="Team Photo 1" class="active">
+        <img src="images/grace.jpg" alt="Team Photo 2">
+        <img src="images/daisy.jpg" alt="Team Photo 3">
       </div>
-      
-      <div class="profile-card">
-        <img src="images/member3.jpg" alt="Member 3">
-        <h2>Daiseree Carzano</h2>
-        <p>UI/UX Specialist | Creator</p>
-        <button class="btn">Get in Touch →</button>
-      </div>
+
     </div>
-    <p class="swipe">SWIPE RIGHT ➡➡</p>
+
+    <div class="carousel-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
   </section>
+
+  <!-- PROFILES SECTION -->
+  <section class="profiles">
+    <div class="section-header">
+      <h2>Our Team</h2>
+      <div class="underline"></div>
+    </div>
+
+    <div class="profile-container">
+
+      <div class="profile-card">
+        <div class="img-wrapper">
+          <img src="images/rose1.png" alt="Mary Rose">
+        </div>
+        <h3>Mary Rose Abregana</h3>
+        <p class="role">Web Developer | Designer</p>
+        <div class="card-footer">
+          <span class="badge">Developer</span>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="img-wrapper">
+          <img src="images/grace.jpg" alt="Mary Grace">
+        </div>
+        <h3>Mary Grace Sombilon</h3>
+        <p class="role">Backend Engineer | Innovator</p>
+        <div class="card-footer">
+          <span class="badge">Engineer</span>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="img-wrapper">
+          <img src="images/daisy.jpg" alt="Daiseree">
+        </div>
+        <h3>Daiseree Carzano</h3>
+        <p class="role">UI/UX Specialist | Creator</p>
+        <div class="card-footer">
+          <span class="badge">Designer</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 DaMary's Team | "Dream in code. Build in reality."</p>
+    <a href="#">Back to Top</a>
+  </footer>
 
   <script src="script.js"></script>
 </body>

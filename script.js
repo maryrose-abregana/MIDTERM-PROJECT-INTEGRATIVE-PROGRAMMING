@@ -1,7 +1,10 @@
-// Enable horizontal scroll with mouse wheel
-const profiles = document.querySelector('.profile-container');
+// CAROUSEL FUNCTIONALITY
+let currentIndex = 0;
+const images = document.querySelectorAll('.hero-right img');
 
-profiles.addEventListener('wheel', (event) => {
-  event.preventDefault();
-  profiles.scrollLeft += event.deltaY;
-});
+function showNextImage() {
+  images[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex + 1) % images.length;
+  images[currentIndex].classList.add('active');
+}
+setInterval(showNextImage, 3000);
