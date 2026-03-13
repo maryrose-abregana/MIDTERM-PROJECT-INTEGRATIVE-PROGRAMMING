@@ -113,8 +113,6 @@ h1, h2, h3 {
   flex: 1;
 }
 
-
-
 /* HERO LEFT */
 .hero-left {
   flex: 1;
@@ -246,7 +244,6 @@ h1, h2, h3 {
   width: 100%;
   max-width: 1200px;
 }
-
 
 .dot {
   width: 8px;
@@ -471,7 +468,6 @@ footer a:hover {
   }
 }
 
-
 /* PORTFOLIO PAGE — portfolio.html */
 
 /* HERO VIDEO SECTION */
@@ -617,9 +613,7 @@ footer a:hover {
   }
 }
 
-
 /* FAVORITES PAGE — Favorites.html */
-
 
 /*  VIDEO BACKGROUND (favorites) */
 .hero-video {

@@ -103,19 +103,17 @@ function arithmetic(){
             let total;
             switch(operator){
                 case 1:
-                //case "+":
                     total = num1 + num2;
                     break;
                 case 2:
-                //case "-":
                     total = num1 - num2;
                     break;
                 case 3:
-                //case "*":
+
                     total = num1 * num2;
                     break;
                 case 4:
-                //case "/":
+
                     if (num2 === 0){
                         alert("Cannot divide by 0");
                         break;
